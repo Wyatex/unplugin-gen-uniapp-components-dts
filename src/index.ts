@@ -30,3 +30,4 @@ export const unpluginFactory: UnpluginFactory<Options | undefined> = (
 export const unplugin = /* #__PURE__ */ createUnplugin(unpluginFactory)
 
 export default unplugin
+export * from './resolvers'

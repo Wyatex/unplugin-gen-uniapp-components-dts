@@ -38,6 +38,10 @@ importers:
       unplugin:
         specifier: ^1.5.1
         version: 1.5.1
+    optionalDependencies:
+      vk-uview-ui:
+        specifier: latest
+        version: 1.5.2
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^2.2.2
@@ -4816,6 +4820,13 @@ packages:
       - supports-color
       - terser
     dev: true
+
+  /vk-uview-ui@1.5.2:
+    resolution: {integrity: sha512-RRZgiEAc8qaUerSi7lSbrkCoLBgRUwFQHwP1V44pJO7Js+7HeHFEkkpPrtkOi14hl4CntR4qIhIDvaKmIJqVsw==}
+    engines: {HBuilderX: ^3.1.0}
+    requiresBuild: true
+    dev: false
+    optional: true
 
   /vue-eslint-parser@9.3.2(eslint@8.55.0):
     resolution: {integrity: sha512-q7tWyCVaV9f8iQyIA5Mkj/S6AoJ9KBN8IeUSf3XEmBrOtxOZnfTg5s4KClbZBCK3GtnT/+RyCLZyDHuZwTuBjg==}

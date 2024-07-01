@@ -4,6 +4,7 @@ import { searchComponents } from '../src/core/search'
 import { getRelative, snakeToCamel } from '../src/core/utils'
 import { getDeclaration } from '../src/core/declaration'
 import { genDeclaration } from '../src/core'
+import { VkUviewUiResolver } from '../src/resolvers/vkUviewUi'
 
 describe('index', () => {
   it('hi vitest', () => {
@@ -60,4 +61,5 @@ describe('index', () => {
       "
     `)
   })
+  
 })

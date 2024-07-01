@@ -11,15 +11,21 @@ export function genDeclaration(
   scanPath = 'src/components/',
 ) {
   const components = searchComponents(scanPath)
-  const compMap = Object.fromEntries(
+  const relatedPath = getRelative(options.dtsPath, scanPath)
+  const compMap = {}
+  if (options.resolvers) {
+    options.resolvers.forEach((resolver) => {
+      Object.assign(compMap, resolver())
+    })
+  }
+  Object.assign(compMap, Object.fromEntries(
     components.map((file) => {
       const [_, fileNameWithExt] = file.split('/')
       const [fileName] = fileNameWithExt.split('.')
-      return [snakeToCamel(fileName), file]
+      return [snakeToCamel(fileName), `${relatedPath}${file}`]
     }),
-  )
-  const relatedPath = getRelative(options.dtsPath, scanPath)
-  const declaration = getDeclaration(compMap, relatedPath)
+  ))
+  const declaration = getDeclaration(compMap)
   fs.writeFileSync(options.dtsPath, declaration, {
     encoding: 'utf-8',
   })

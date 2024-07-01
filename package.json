@@ -13,6 +13,10 @@
   "bugs": {
     "url": "https://github.com/wyatex/unplugin-gen-uniapp-components-dts/issues"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
   "keywords": [
     "unplugin",
     "vite",
@@ -131,6 +135,9 @@
     "minimatch": "^9.0.5",
     "mlly": "^1.7.1",
     "unplugin": "^1.5.1"
+  },
+  "optionalDependencies": {
+    "vk-uview-ui": "latest"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.2.2",
