@@ -16,7 +16,7 @@ export function VkUviewUiResolver() {
   const compMap = Object.fromEntries(
     components.map((path) => {
       const name = path.split('/')[0]
-      return [snakeToCamel(name), `vk-uview-ui/components/${name}`]
+      return [snakeToCamel(name), `vk-uview-ui/components/${path}`]
     }),
   )
   return compMap

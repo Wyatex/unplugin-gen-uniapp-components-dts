@@ -85,6 +85,9 @@
       "*": [
         "./dist/*",
         "./*"
+      ],
+      "resolvers": [
+        "./dist/resolvers/index.d.ts"
       ]
     }
   },
